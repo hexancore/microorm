@@ -1,0 +1,8 @@
+core:
+  typeorm-postgres:
+    type: postgres
+    host: 127.0.0.1
+    port: 10031
+    retryAttempts: 4
+    retryDelay: 3000
+    authSecretKey: core.typeorm.postgres

@@ -1,0 +1,14 @@
+version: '3.6'
+services:
+  postgres:
+    image: bitnami/postgresql:16
+    container_name: ${PROJECT}-postgresql
+    restart: always
+    mem_limit: 256M
+    tmpfs:
+      - /tmp:size=64M
+    environment:
+      - POSTGRESQL_PASSWORD=test
+      - POSTGRESQL_DATABASE=hexancore_dev
+    ports:
+      - ${POSTGRESQL_HOST_PORT}:5432
